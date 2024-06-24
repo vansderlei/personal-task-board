@@ -77,7 +77,7 @@ export default function Dashboard({ user }: DashboardProps) {
       await addDoc(collection(db, "tasks"), {
        task:  input,
        createdAt: new Date(),
-       user: user,
+       user,
        public: publicTask
 
       })
